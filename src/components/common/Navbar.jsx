@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/common/faq.avif";
 import useAdmin from "../../hooks/useAdmin";
 import useVendor from "../../hooks/useVendor";
+import auth from "../../../firebase.init";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -49,11 +50,11 @@ const Navbar = () => {
         </ul>
       </li>
       {user && (
-        <React.Fragment>
+        <>
           <li>
             <Link to="/inventory">Inventory</Link>
           </li>
-        </React.Fragment>
+        </>
       )}
 
       {(isUserAdmin || isVendor) && (
