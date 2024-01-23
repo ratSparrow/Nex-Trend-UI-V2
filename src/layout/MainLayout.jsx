@@ -1,4 +1,7 @@
 import { useSelector } from "react-redux";
+import Navbar from "../components/common/Navbar";
+import { Link, Outlet } from "react-router-dom";
+import Footer from "../components/common/Footer";
 
 
 const MainLayout = () => {
