@@ -6,11 +6,11 @@ import {
   removeFromCart,
   removeOneFromCart,
 } from "../../redux/features/cart/cartSlice";
-import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const xmark = <FontAwesomeIcon icon={faXmark} />;
-const sub = <FontAwesomeIcon icon={faMinus} />;
-const add = <FontAwesomeIcon icon={faPlus} />;
+// import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// const xmark = <FontAwesomeIcon icon={faXmark} />;
+// const sub = <FontAwesomeIcon icon={faMinus} />;
+// const add = <FontAwesomeIcon icon={faPlus} />;
 
 const ShoppingCart = ({ product }) => {
   const { img, quantity, price, name } = product;
@@ -46,20 +46,20 @@ const ShoppingCart = ({ product }) => {
                 className="mx-5 text-red-500"
                 onClick={() => handleRemove(product)}
               >
-                {xmark}
+              
               </button>
               <h2 className="text-sm font-medium">Remove </h2>
             </div>
 
             <div className="mb-2 flex justify-center items-center">
               <button className="mx-2" onClick={() => handleDecrease(product)}>
-                {sub}
+          
               </button>
               <h2 className="text-sm bg-base-200 px-2 py-1 font-semibold rounded border-2 border-slate-300">
                 {quantity}
               </h2>
               <button className="mx-2" onClick={() => handleIncrease(product)}>
-                {add}
+              
               </button>
             </div>
           </div>
