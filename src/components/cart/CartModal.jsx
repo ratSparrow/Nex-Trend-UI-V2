@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { useSelector } from "react-redux";
-
+import ShoppingCart from "./ShoppingCart";
 
 const CartModal = ({ children }) => {
   const { products, total } = useSelector((state) => state.cart);
@@ -22,7 +23,11 @@ const CartModal = ({ children }) => {
           </h3>
 
           {products.map((product) => (
-            <Cart key={product._id} products={products} product={product} />
+            <ShoppingCart
+              key={product._id}
+              products={products}
+              product={product}
+            />
           ))}
 
           <h2 className="text-sm font-semibold mt-8">Sub Total</h2>
