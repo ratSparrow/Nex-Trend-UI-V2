@@ -1,7 +1,7 @@
 import slider1 from "../../assets/images/common/slider-1.avif";
-import slider2 from "../../assets/images/common/slider-2.avif";
+import slider2 from "../../assets/images/common/slider2.avif";
 import slider3 from "../../assets/images/common/slider3.avif";
-import slider4 from "../../assets/images/common/slider-4.avif";
+import slider4 from "../../assets/images/common/slider4.avif";
 
 const Banner = () => {
   return (
