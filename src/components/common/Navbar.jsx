@@ -5,6 +5,7 @@ import logo from "../../assets/images/common/faq.avif";
 import useAdmin from "../../hooks/useAdmin";
 import useVendor from "../../hooks/useVendor";
 import auth from "../../../firebase.init";
+import "../css/Navbar.css";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);

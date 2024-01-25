@@ -1,3 +1,4 @@
+import Shop from "../shop/Shop";
 import Hero from "./Hero";
 import Marketing from "./Marketing";
 import Testimonials from "./Testimonials";
@@ -47,7 +48,7 @@ const Homepage = () => {
           </div>
         ))}
       </section>
-
+      <Shop />
       <Marketing />
       <Testimonials />
     </section>
