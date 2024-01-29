@@ -13,6 +13,7 @@ import Ticket from "../pages/static/Ticket";
 import Faq from "../pages/static/Faq";
 import ComingSoon from "../pages/common/ComingSoon";
 import Login from "../pages/common/Login";
+import Inventory from "../pages/shop/Inventory";
 
 const routes = createBrowserRouter([
   {
@@ -63,7 +64,14 @@ const routes = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      
+      {
+        path: "/inventory",
+        element: (
+          <PrivateRoute>
+            <Inventory />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/inventory/details/:id",
         element: (
