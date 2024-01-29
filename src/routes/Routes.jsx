@@ -4,6 +4,8 @@ import Homepage from "../pages/homepage/Homepage";
 import About from "../pages/About/About";
 import Contact from "../pages/common/Contact";
 import PrivateRoute from "./PrivateRoute";
+import ProductDetails from "../pages/shop/ProductDetails";
+import TermCondition from "../pages/common/Term&Condition";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +23,10 @@ const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/terms",
+        element: <TermCondition />,
       },
       {
         path: "/inventory/details/:id",
