@@ -6,6 +6,7 @@ import Contact from "../pages/common/Contact";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../pages/shop/ProductDetails";
 import TermCondition from "../pages/common/Term&Condition";
+import Privacy from "../pages/common/Privacy";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const routes = createBrowserRouter([
       {
         path: "/terms",
         element: <TermCondition />,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy />,
       },
       {
         path: "/inventory/details/:id",
