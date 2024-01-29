@@ -12,6 +12,7 @@ import Support from "../pages/static/Support";
 import Ticket from "../pages/static/Ticket";
 import Faq from "../pages/static/Faq";
 import ComingSoon from "../pages/common/ComingSoon";
+import Login from "../pages/common/Login";
 
 const routes = createBrowserRouter([
   {
@@ -58,6 +59,11 @@ const routes = createBrowserRouter([
         path: "/coming-soon",
         element: <ComingSoon />,
       },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      
       {
         path: "/inventory/details/:id",
         element: (
