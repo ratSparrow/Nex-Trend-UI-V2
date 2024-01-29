@@ -15,6 +15,7 @@ import ComingSoon from "../pages/common/ComingSoon";
 import Login from "../pages/common/Login";
 import Inventory from "../pages/shop/Inventory";
 import Orders from "../pages/payment/Orders";
+import Shipment from "../pages/payment/Shipment";
 
 const routes = createBrowserRouter([
   {
@@ -86,6 +87,14 @@ const routes = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Orders />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/shipping",
+        element: (
+          <PrivateRoute>
+            <Shipment />
           </PrivateRoute>
         ),
       },
