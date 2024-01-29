@@ -16,6 +16,7 @@ import Login from "../pages/common/Login";
 import Inventory from "../pages/shop/Inventory";
 import Orders from "../pages/payment/Orders";
 import Shipment from "../pages/payment/Shipment";
+import Payment from "../pages/payment/Payment";
 
 const routes = createBrowserRouter([
   {
@@ -95,6 +96,14 @@ const routes = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Shipment />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/payment",
+        element: (
+          <PrivateRoute>
+            <Payment />
           </PrivateRoute>
         ),
       },
