@@ -2,11 +2,16 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Homepage from "../pages/homepage/Homepage";
 import About from "../pages/About/About";
-import Contact from "../pages/common/Contact";
+import Contact from "../pages/static/Contact";
 import PrivateRoute from "./PrivateRoute";
 import ProductDetails from "../pages/shop/ProductDetails";
-import TermCondition from "../pages/common/Term&Condition";
-import Privacy from "../pages/common/Privacy";
+import TermCondition from "../pages/static/Term&Condition";
+import Privacy from "../pages/static/Privacy";
+import ReturnPolicy from "../pages/static/ReturnPolicy";
+import Support from "../pages/static/Support";
+import Ticket from "../pages/static/Ticket";
+import Faq from "../pages/static/Faq";
+import ComingSoon from "../pages/common/ComingSoon";
 
 const routes = createBrowserRouter([
   {
@@ -32,6 +37,26 @@ const routes = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy />,
+      },
+      {
+        path: "/return",
+        element: <ReturnPolicy />,
+      },
+      {
+        path: "/support",
+        element: <Support />,
+      },
+      {
+        path: "/ticket",
+        element: <Ticket />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/coming-soon",
+        element: <ComingSoon />,
       },
       {
         path: "/inventory/details/:id",
