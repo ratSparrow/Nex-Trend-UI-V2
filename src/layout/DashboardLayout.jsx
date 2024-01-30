@@ -1,9 +1,10 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+
+import { Link, Outlet } from "react-router-dom";
+import logo from "../assets/images/common/favicon.jpg";
 import useAdmin from "../hooks/useAdmin";
 import useVendor from "../hooks/useVendor";
-import { Link, Outlet } from "react-router-dom";
-import logo from "../images/favicon.jpg";
 
 const DashboardLayout = () => {
   const [user] = useAuthState(auth);
