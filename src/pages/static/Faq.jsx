@@ -1,5 +1,5 @@
-import faq from "../../assets/faq.png";
-import Questions from "./Questions";
+import faq from "../../assets/images/common/faq.png";
+import Questions from "./FaqQuestions";
 
 const Faq = () => {
   return (

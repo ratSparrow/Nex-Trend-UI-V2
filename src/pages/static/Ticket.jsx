@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { useForm } from "react-hook-form";
-import support from "../../assets/support.png";
+import support from "../../assets/images/common/support.png";
 
 const Ticket = () => {
   const { register, handleSubmit } = useForm();

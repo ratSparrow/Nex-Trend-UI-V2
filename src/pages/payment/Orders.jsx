@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import ReviewItem from "../ReviewItem/ReviewItem";
+
 import { useDispatch, useSelector } from "react-redux";
 import { removeOneFromCart } from "../../redux/features/cart/cartSlice";
-import orderImg from "../../assets/no-order.png";
+import orderImg from "../../assets/images/common/no-order.png";
+import ReviewItem from "./ReviewItem";
 
 const Orders = () => {
   const { products } = useSelector((state) => state.cart);

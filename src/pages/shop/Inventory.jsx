@@ -1,8 +1,10 @@
 import  { useState } from "react";
 
-import MoreProducts from "../MoreProducts/MoreProducts";
-import Loading from "../../Loading/Loading";
-import useProducts from "../../../hooks/useProducts";
+
+
+
+import Loading from "../../components/common/Loading";
+import useProducts from "../../hooks/useProducts";
 const categories = [
   {
     id: 1,
@@ -81,7 +83,7 @@ const Inventory = () => {
       </div>
 
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4  md:grid-cols-2  mt-6 ">
-        {newFilteredList?.map((product) => (
+        {newFilteredList.map((product) => (
           <MoreProducts product={product} key={product._id} />
         ))}
       </div>
