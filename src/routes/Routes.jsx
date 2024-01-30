@@ -17,6 +17,8 @@ import Inventory from "../pages/shop/Inventory";
 import Orders from "../pages/payment/Orders";
 import Shipment from "../pages/payment/Shipment";
 import Payment from "../pages/payment/Payment";
+import DashboardLayout from "../layout/DashboardLayout";
+import ShowError from "../components/common/ShowError";
 
 const routes = createBrowserRouter([
   {
@@ -110,55 +112,14 @@ const routes = createBrowserRouter([
     ],
   },
 
-  //   {
-  //     path: "/dashboard",
-  //     element: (
-  //       // <PrivateRoutes>
-  //       <DashboardLayout />
-  //       // </PrivateRoutes>
-  //     ),
-  //     children: [
-  //       {
-  //         path: "/dashboard/job",
-  //         element: <ViewJobs />,
-  //       },
-  //       {
-  //         path: "/dashboard/job/edit/:id",
-  //         element: <EditJob />,
-  //       },
-  //       {
-  //         path: "/dashboard/job/create",
-  //         element: <CreateJob />,
-  //       },
-  //       {
-  //         path: "/dashboard/job/applied-jobs",
-  //         element: <AppliedJobs />,
-  //       },
-  //       {
-  //         path: "/dashboard/blog/create",
-  //         element: <CreateBlog />,
-  //       },
-  //       {
-  //         path: "/dashboard/blog",
-  //         element: <ViewBlogs />,
-  //       },
-  //       {
-  //         path: "/dashboard/blog/edit/:id",
-  //         element: <EditBlog />,
-  //       },
-  //       {
-  //         path: "/dashboard/company",
-  //         element: <ViewCompany />,
-  //       },
-  //       {
-  //         path: "/dashboard/company/edit/:id",
-  //         element: <UpdateCompany />,
-  //       },
-  //       {
-  //         path: "/dashboard/company-chart",
-  //         element: <CompanyChart />,
-  //       },
-  //     ],
-  //   },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    errorElement: <ShowError />,
+  },
 ]);
 export default routes;
