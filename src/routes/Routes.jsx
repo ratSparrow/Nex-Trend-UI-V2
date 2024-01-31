@@ -19,6 +19,9 @@ import Shipment from "../pages/payment/Shipment";
 import Payment from "../pages/payment/Payment";
 import DashboardLayout from "../layout/DashboardLayout";
 import ShowError from "../components/common/ShowError";
+import UserReview from "../pages/dashboard/UserReview";
+import AdminRoute from "./AdminRoute";
+import AllUser from "../pages/dashboard/user/AllUser";
 
 const routes = createBrowserRouter([
   {
@@ -120,6 +123,20 @@ const routes = createBrowserRouter([
       </PrivateRoute>
     ),
     errorElement: <ShowError />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <UserReview />,
+      },
+      {
+        path: "/dashboard/user",
+        element: (
+          <AdminRoute>
+            <AllUser />
+          </AdminRoute>
+        ),
+      },
+    ],
   },
 ]);
 export default routes;
