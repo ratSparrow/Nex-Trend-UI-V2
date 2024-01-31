@@ -23,6 +23,10 @@ import UserReview from "../pages/dashboard/UserReview";
 import AdminRoute from "./AdminRoute";
 import AllUser from "../pages/dashboard/user/AllUser";
 
+import Vendor from "../pages/dashboard/vendor/Vendor";
+import VendorRoute from "./VendorRoute";
+import AddProduct from "../pages/dashboard/product/AddProduct";
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -134,6 +138,22 @@ const routes = createBrowserRouter([
           <AdminRoute>
             <AllUser />
           </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/addvendor",
+        element: (
+          <AdminRoute>
+            <Vendor />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/addproduct",
+        element: (
+          <VendorRoute>
+            <AddProduct />
+          </VendorRoute>
         ),
       },
     ],
