@@ -19,13 +19,14 @@ import Shipment from "../pages/payment/Shipment";
 import Payment from "../pages/payment/Payment";
 import DashboardLayout from "../layout/DashboardLayout";
 import ShowError from "../components/common/ShowError";
-import UserReview from "../pages/dashboard/UserReview";
+
 import AdminRoute from "./AdminRoute";
 import AllUser from "../pages/dashboard/user/AllUser";
 
 import Vendor from "../pages/dashboard/vendor/Vendor";
 import VendorRoute from "./VendorRoute";
 import AddProduct from "../pages/dashboard/product/AddProduct";
+import UserReview from "../pages/dashboard/user/UserReview";
 
 const routes = createBrowserRouter([
   {
