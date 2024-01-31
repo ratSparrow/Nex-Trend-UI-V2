@@ -1,10 +1,11 @@
-import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/common/faq.avif";
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 import useVendor from "../../hooks/useVendor";
-import auth from "../../../firebase.init";
+import React from "react";
+import toast from "react-hot-toast";
+import logo from "../../assets/images/common/favicon.jpg";
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
   const [isVendor] = useVendor(user?.email);
 
   const navItems = (
-    <>
+    <React.Fragment>
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -51,11 +52,11 @@ const Navbar = () => {
         </ul>
       </li>
       {user && (
-        <>
+        <React.Fragment>
           <li>
             <Link to="/inventory">Inventory</Link>
           </li>
-        </>
+        </React.Fragment>
       )}
 
       {(isUserAdmin || isVendor) && (
@@ -83,8 +84,9 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         </li>
       )}
-    </>
+    </React.Fragment>
   );
+
   return (
     <div className="navbar bg-[#1A103C] ">
       <div className="navbar-start ">
