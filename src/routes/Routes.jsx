@@ -73,10 +73,7 @@ const routes = createBrowserRouter([
         path: "/coming-soon",
         element: <ComingSoon />,
       },
-      {
-        path: "/login",
-        element: <Login />,
-      },
+      
       {
         path: "/inventory",
         element: (
@@ -158,6 +155,11 @@ const routes = createBrowserRouter([
         ),
       },
     ],
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 export default routes;
