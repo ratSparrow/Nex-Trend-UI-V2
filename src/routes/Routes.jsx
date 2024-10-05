@@ -22,6 +22,7 @@ import ShowError from "../components/common/ShowError";
 
 import AdminRoute from "./AdminRoute";
 import AllUser from "../pages/dashboard/user/AllUser";
+import NotFound from "../pages/static/NotFound"
 
 import Vendor from "../pages/dashboard/vendor/Vendor";
 import VendorRoute from "./VendorRoute";
@@ -161,5 +162,10 @@ const routes = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "*",
+    element: <NotFound/>,
+  },
+
 ]);
 export default routes;
