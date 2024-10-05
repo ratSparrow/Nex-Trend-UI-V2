@@ -62,7 +62,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-[#1A103C] ">
+    <div className="navbar  ">
       <div className="navbar-start ">
         <div className="dropdown max-w-[1100px]">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

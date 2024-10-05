@@ -16,7 +16,7 @@ const Shop = () => {
     return <Loading />;
   }
   return (
-    <main className="bg-[#F5F6F7] py-5">
+    <main className="py-5">
       <section className=" p-2 max-w-[1200px] mx-auto">
         <div className=" text-center mb-4">
           <input
@@ -37,7 +37,7 @@ const Shop = () => {
           <Loading />
         ) : (
           <div className="grid ">
-            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-6">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6">
               {displayProduct
                 .filter((item) => {
                   return searchText.toLocaleLowerCase() === ""

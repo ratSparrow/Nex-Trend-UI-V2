@@ -30,61 +30,62 @@ const Login = () => {
   }
 
   return (
-    <div className="login-body">
-      <div className="mx-auto border-2 rounded sm:w-1/4 lg:w-2/4">
-      <h2 className="text-8xl text-white mb-4">
-      <FaUser className="mx-auto" />
-      </h2>
-      <div>
+    <div className="login-body flex justify-center items-center ">
+      <div className="mx-auto rounded sm:w-1 lg:w-1/3 border-2 p-10 ">
+        <h2 className="text-6xl text-white mb-4 ">
+          <FaUser className="mx-auto border-2 rounded-full p-2" />
+        </h2>
         <div>
+          <div>
 
-        </div>
-        
-        <div>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-1 gap-4 place-content-center "
-          >
-            <input
-              required
-              {...register("email")}
-              type="email"
-              name="email"
-              placeholder="your email"
-              className="rounded input-primary bg-white p-1 mx-auto hover:border-lime-300
-            w-3/4 border"
-            />
+          </div>
 
-            <input
-              required
-              {...register("password")}
-              type="password"
-              name="password"
-              placeholder="password"
-              className="rounded input-primary bg-white p-1 mx-auto hover:border-lime-300
-      w-3/4 border"
-            />
+          <div>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid grid-cols-1 gap-4 place-content-center "
+            >
+              <input
+                required
+                {...register("email")}
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="rounded input-info bg-white p-1 mx-auto hover:border-lime-300
+            w-full border"
+              />
 
-            <input
-              type="submit"
-              className="rounded font-semibold text-white w-2/4 mx-auto px-1 bg-[#FE5387] p-1  hover:bg-[#FE5387]  m-3 cursor-pointer"
-            />
-          </form>
-          {error && (
-            <h1 className="text-white text-center text-sm border-2 border-red-800 rounded p-1 m-3 bg-red-800">
-              {error}
-            </h1>
-          )}
-          <Link to="/signup">
-            <h2 className="text-blue-800 hover:text-red-500 text-center text-xl  mt-4 mb-8 hover:capitalize ">
-              <span className="border-b-2 border-blue-800 hover:border-red-500">
-                Not An Account? Sign Up
-              </span>
-            </h2>
-          </Link>
+              <input
+                required
+                {...register("password")}
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="rounded input-info bg-white p-1 mx-auto hover:border-lime-300
+      w-full border"
+              />
+
+              <input
+                type="submit"
+                className="rounded font-semibold w-full mx-auto px-1 p-1 btn btn-sm m-3 cursor-pointer"
+              />
+            </form>
+            <button className="btn btn-sm w-full">Sign In With Google </button>
+            {error && (
+              <h1 className="text-white text-center text-sm border-2 border-red-800 rounded p-1 m-3 bg-red-800">
+                {error}
+              </h1>
+            )}
+            <Link to="/signup">
+              <h2 className=" text-center text-md mt-4 mb-8 hover:capitalize ">
+                <span className=" hover:border-red-500">
+                  Not An Account? Sign Up
+                </span>
+              </h2>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -27,11 +27,11 @@ const Product = ({ product }) => {
   );
   const dollarSign = <FontAwesomeIcon icon={faDollarSign} />;
   return (
-    <main className="product-container  mx-2 rounded hover:border hover:border-orange-400 hover:shadow-sm">
-      <section className="flex  items-center justify-around">
+    <main className="mx-2 rounded hover:border hover:border-orange-400">
+      <section className=" items-center justify-around">
         <section className="mr-8">
           <figure>
-            <img className="rounded h-40 w-30" src={img} alt="" />
+            <img className="rounded h-40 w-full" src={img} alt="" />
           </figure>
         </section>
 
