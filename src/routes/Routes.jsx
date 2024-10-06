@@ -28,6 +28,7 @@ import Vendor from "../pages/dashboard/vendor/Vendor";
 import VendorRoute from "./VendorRoute";
 import AddProduct from "../pages/dashboard/product/AddProduct";
 import UserReview from "../pages/dashboard/user/UserReview";
+import SignUp from "../pages/common/SignUp";
 
 const routes = createBrowserRouter([
   {
@@ -161,6 +162,10 @@ const routes = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "*",

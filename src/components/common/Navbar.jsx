@@ -5,7 +5,7 @@ import useAdmin from "../../hooks/useAdmin";
 import useVendor from "../../hooks/useVendor";
 import React from "react";
 import toast from "react-hot-toast";
-import logo from "../../assets/images/common/favicon.jpg";
+import logo from "../../assets/images/common/nex-trend.png";
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -95,7 +95,7 @@ const Navbar = () => {
           <Link to="/" className="  ">
             <div className="flex items-center">
               <img src={logo} className="w-10 mx-auto" alt="" />{" "}
-              <span className="text-xl ml-6">Digi Mart </span>
+              <span className="text-xl ml-6">Nex Trend</span>
             </div>
           </Link>
         </h3>

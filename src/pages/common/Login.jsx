@@ -9,6 +9,7 @@ import "../css/Login.css";
 import { toast } from "react-hot-toast";
 import auth from "../../../firebase.init";
 
+
 const Login = () => {
   const [signInWithEmailAndPassword, error] =
     useSignInWithEmailAndPassword(auth);
