@@ -9,7 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import useToken from "../../hooks/useToken";
 import auth from "../../../firebase.init";
-
+import { FaUser } from "react-icons/fa";
 const SignUp = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -54,12 +54,18 @@ const SignUp = () => {
   };
 
   return (
-    <React.Fragment>
-      <div className="bg-slate-100  border-2 mx-auto sm:w-1/4 lg:w-2/4  rounded mt-10">
-        <h2 className="text-3xl text-orange-600 my-10 text-center font-serif font-semibold ">
-          <span className="border-b-2 border-orange-600 "> Sign Up </span>
+    
+    <div className="login-body flex justify-center items-center ">
+              <div className="mx-auto rounded sm:w-1 lg:w-1/3 border-2 p-10 ">
+        <h2 className="text-6xl text-white mb-4">
+        <FaUser className="mx-auto border-2 rounded-full p-2" />
         </h2>
-        <form
+        <div>
+            <div>
+
+            </div>
+            <div>
+            <form
           onSubmit={handleSubmit(onSubmit)}
           className="grid grid-cols-1 gap-4 place-content-center "
         >
@@ -70,7 +76,7 @@ const SignUp = () => {
             name="name"
             placeholder="Name"
             className="rounded input-primary bg-white  p-1 mx-auto hover:border-lime-300
-w-3/4 border"
+w-full border"
           />
           <input
             required
@@ -79,7 +85,7 @@ w-3/4 border"
             name="email"
             placeholder="Email"
             className="rounded input-primary bg-white p-1 mx-auto hover:border-lime-300
-        w-3/4 border"
+        w-full border"
           />
 
           <input
@@ -89,7 +95,7 @@ w-3/4 border"
             name="password"
             placeholder="Password"
             className="rounded input-primary bg-white p-1 mx-auto hover:border-lime-300
-  w-3/4 border"
+  w-full border"
           />
           <input
             required
@@ -98,23 +104,27 @@ w-3/4 border"
             name="confirmPassword"
             placeholder="Confirm Password"
             className="rounded input-primary bg-white p-1 mx-auto hover:border-lime-300
-w-3/4 border"
+w-full border"
           />
 
           <input
             type="submit"
-            className="rounded  font-semibold text-white w-2/4 mx-auto px-1 bg-green-500 p-1  hover:bg-green-600 m-3 cursor-pointer"
+            className="rounded font-semibold w-full mx-auto px-1 p-1 btn btn-sm m-3 cursor-pointer"
           />
         </form>
+        <button className="btn btn-sm w-full">Sign In With Google </button>
         <Link to="/login">
-          <h2 className="text-blue-800 hover:text-red-500 text-center text-xl  mt-4 mb-8 hover:capitalize ">
-            <span className="border-b-2 border-blue-800 hover:border-red-500">
+          <h2 className=" text-center text-md mt-4 mb-8 hover:capitalize ">
+            <span className=" hover:border-red-500">
               Already Have An Account ? Please Login
             </span>
           </h2>
         </Link>
+            </div>
+        </div>
       </div>
-    </React.Fragment>
+    </div>
+
   );
 };
 
