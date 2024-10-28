@@ -62,7 +62,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar  ">
+    <div className="navbar bg-[#FF8C2E] h-1/2 ">
       <div className="navbar-start ">
         <div className="dropdown max-w-[1100px]">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -83,7 +83,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
           >
             {navItems}
           </ul>
@@ -95,7 +95,7 @@ const Navbar = () => {
           <Link to="/" className="  ">
             <div className="flex items-center">
               <img src={logo} className="w-10 mx-auto" alt="" />{" "}
-              <span className="text-xl ml-6">Nex Trend</span>
+              <span className="text-xl ml-6 text-white">Nex Trend</span>
             </div>
           </Link>
         </h3>

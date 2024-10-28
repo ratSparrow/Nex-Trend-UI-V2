@@ -15,11 +15,11 @@ const MainLayout = () => {
             <button className="btn-regular">Review Order</button>
           </Link>
         </CartModal>
-        <div className="fixed top-2/4 right-0">
+        <div className="fixed top-2/4 right-0 ">
           <label
             title="cart"
             htmlFor="cart-modal"
-            className="btn bg-black border-0 text-[#FB923C]  rounded"
+            className="btn bg-[#FF8C2E] border-0 text-white hover:bg-[#FF9C2E]  rounded"
           >
             <div className="indicator">
               <svg

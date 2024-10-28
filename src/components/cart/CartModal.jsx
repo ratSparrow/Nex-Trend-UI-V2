@@ -2,6 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ShoppingCart from "./ShoppingCart";
+import { IoIosAddCircle } from "react-icons/io";
 
 const CartModal = ({ children }) => {
   const { products, total } = useSelector((state) => state.cart);
