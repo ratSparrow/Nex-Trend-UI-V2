@@ -5,12 +5,9 @@ import CartModal from "../../components/cart/CartModal";
 import { Link } from "react-router-dom";
 import Product from "./Product";
 
-const Shop = () => {
+const Shop = ({searchText}) => {
   const [displayProduct, loading] = useProducts("shop");
-  const [searchText, setSearchText] = useState("");
-  const handleSearch = (payload) => {
-    setSearchText(payload);
-  };
+
 
   if (loading === true) {
     return <Loading />;
@@ -18,15 +15,7 @@ const Shop = () => {
   return (
     <main className="py-5">
       <section className=" p-2 max-w-[1200px] mx-auto">
-        <div className=" text-center mb-4">
-          <input
-            required
-            onChange={(e) => handleSearch(e.target.value)}
-            placeholder="Search Product"
-            type="text"
-            className="input input-primary hover:border-lime-300 rounded-sm  w-1/2 input-sm"
-          />
-        </div>
+
         <h2 className="text-3xl text-orange-600 my-10 text-center font-serif font-semibold ">
           <span className="border-b-2 border-orange-600 ">
             {" "}

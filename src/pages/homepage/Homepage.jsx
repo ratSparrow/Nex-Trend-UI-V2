@@ -2,6 +2,8 @@ import Shop from "../shop/Shop";
 import Hero from "./Hero";
 import Marketing from "./Marketing";
 import Testimonials from "./Testimonials";
+import { useState } from "react"
+
 
 const extras = [
   {
@@ -31,8 +33,35 @@ const extras = [
 ];
 
 const Homepage = () => {
+  const [searchText, setSearchText] = useState("");
+  const handleSearch = (payload) => {
+    setSearchText(payload);
+  };
   return (
     <section>
+      <div className="max-w-xl mx-auto text-center my-4">
+        <label className="input input-bordered flex items-center gap-2">
+          <input
+            type="text"
+            className="grow  w-full "
+            placeholder="Search Product"
+            onChange={(e) => handleSearch(e.target.value)}
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="h-4 w-4 opacity-70">
+            <path
+              fillRule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clipRule="evenodd" />
+          </svg>
+        </label>
+
+      </div>
+
+
       <Hero />
       <section className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto my-10">
         {extras.map((extra) => (
@@ -48,7 +77,7 @@ const Homepage = () => {
           </div>
         ))}
       </section>
-      <Shop />
+      <Shop searchText={searchText} />
       <Marketing />
       <Testimonials />
     </section>
