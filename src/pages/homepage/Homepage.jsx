@@ -60,8 +60,6 @@ const Homepage = () => {
         </label>
 
       </div>
-
-
       <Hero />
       <section className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto my-10">
         {extras.map((extra) => (

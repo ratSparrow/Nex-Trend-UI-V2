@@ -27,32 +27,27 @@ const Product = ({ product }) => {
   );
   const dollarSign = <FontAwesomeIcon icon={faDollarSign} />;
   return (
-    <main className="mx-2 rounded hover:border hover:border-orange-400">
-      <section className=" items-center justify-around">
-        <section className="mr-8">
-          <figure>
-            <img className="rounded h-40 w-full" src={img} alt="" />
-          </figure>
-        </section>
-
+    <main className="mx-2 rounded">
+      <section className="tems-center justify-around">
+        <img className="rounded h-40 w-full" src={img} alt="" />
         <section>
-          <h5 className="text-md font-semibold text-yellow-600" title={name}>
+          <h1 className="text-md font-semibold text-yellow-600" title={name}>
             {name.slice(0, 30)}..
-          </h5>
-          <h2 className="my-1">
+          </h1>
+          <h1 className="my-1">
             <small>
               Seller by{" "}
               <span className="text-red-600 font-semibold">{seller}</span>
             </small>
-          </h2>
-          <h2>
+          </h1>
+          <h1>
             <span className="text-[#0C436C] mr-1">{dollarSign}</span>
             <span>{price}</span>
-          </h2>
-          <h2 className="text-lg text-red-600 font-semibold">
+          </h1>
+          <h1 className="text-lg text-red-600 font-semibold">
             {" "}
             <small>available {stock} in stock </small>
-          </h2>
+          </h1>
           <Rating
             className="text-orange-400 mt-1"
             initialRating={star}
