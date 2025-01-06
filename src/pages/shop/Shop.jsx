@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import useProducts from "../../hooks/useProducts";
 import Loading from "../../components/common/Loading";
 import CartModal from "../../components/cart/CartModal";
@@ -13,7 +13,7 @@ const Shop = ({searchText}) => {
     return <Loading />;
   }
   return (
-    <main className="py-5">
+    <main className=" py-5">
       <section className=" p-2 max-w-[1200px] mx-auto">
 
         <h2 className="text-3xl text-orange-600 my-10 text-center font-serif font-semibold ">

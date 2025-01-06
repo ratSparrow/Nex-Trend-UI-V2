@@ -27,7 +27,7 @@ const Product = ({ product }) => {
   );
   const dollarSign = <FontAwesomeIcon icon={faDollarSign} />;
   return (
-    <main className="mx-2 rounded">
+    <main className=" card  mx-2 rounded">
       <section className="tems-center justify-around">
         <img className="rounded h-40 w-full" src={img} alt="" />
         <section>
